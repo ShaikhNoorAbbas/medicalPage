@@ -1,0 +1,435 @@
+:root {
+  --light-primary-color: #059dc0;
+  --dark-primary-color: rgb(30, 70, 133);
+  --gray-color: rgb(80, 83, 84);
+}
+@font-face {
+  font-family: formFont;
+  src: url(./fonts/FontsFree-Net-Larizo-DEMO.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+p {
+  line-height: 1.5;
+  text-align: justify;
+  letter-spacing: 0.9px;
+}
+::selection {
+  background-color: rgb(106, 216, 124);
+  color: rgb(0, 0, 0);
+}
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--light-primary-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  box-shadow: 0px 0px 0.85rem black;
+}
+.container {
+  margin-inline: 3vw;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.grid {
+  display: grid;
+}
+.grid-two--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.sectionContainer {
+  margin-inline: 3vw;
+  padding: 5rem 0;
+  border-bottom: 4px dotted var(--light-primary-color);
+  min-height: 100vh;
+}
+.sectionContainer2 {
+  padding: 5rem;
+  margin-inline: 3vw;
+  border-bottom: 4px dotted var(--light-primary-color);
+}
+/***** Navbar Section *****/
+.navbar {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+}
+.navbar__logo {
+  display: inline-block;
+  margin-right: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+.navbar__logo img {
+  width: 40px;
+}
+.navbar__logo div {
+  display: flex;
+  align-items: center;
+}
+.navbar__logo span {
+  margin-left: 2.5rem;
+  font-size: 0.9rem;
+}
+/* Medical Circle Style  */
+.medCircle img {
+  width: 45px;
+}
+/* Navbar Contact Style */
+.navContact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navContact i {
+  font-size: 1.5rem;
+}
+.navContact p {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+}
+.navContact div {
+  line-height: 1.2;
+}
+.navContact h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/***** End Navbar Section *****/
+
+/***** Header 2 Section *****/
+.header2 {
+  background-color: var(--light-primary-color);
+}
+.header2__links {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header2__links li {
+  list-style-type: none;
+}
+
+.header2__links li a {
+  font-weight: 500;
+}
+
+/***** End Header 2 Section *****/
+
+/* Responsive Navbar Startes from here*/
+.responsive {
+  display: none;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--light-primary-color);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+/* Responsive Navbar Ends here */
+
+/***** Hero Section *****/
+
+.heroSection {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./images/heroimage.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.heroSection {
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+}
+.maintext {
+  color: white;
+  line-height: 2;
+}
+.maintext h1 {
+  color: white;
+  font-size: 2.9rem;
+  text-shadow: 1px 1px 0.85rem black;
+}
+.maintext p {
+  max-width: 50%;
+  font-size: 1.3rem;
+}
+
+.enquirebtn {
+  padding: 0.9rem;
+  background-color: var(--light-primary-color);
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+}
+.enquirebtn:hover {
+  box-shadow: 2px 1px 2px black;
+}
+.enquirebtn a {
+  font-size: 1.1rem;
+}
+
+/***** End Hero Section *****/
+
+/***** Treatment Overview Section *****/
+
+.treatSection .grid {
+  gap: 40px;
+  align-items: center;
+}
+.treatPara p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.headText {
+  font-size: 2.5rem;
+}
+.imageContainer img {
+  width: 100%;
+  box-shadow: 1px 1px 0.85rem black;
+}
+
+/***** End Treatment Overview Section *****/
+
+/***** Eligibility Section *****/
+/* ? Working on This Section  */
+.eliPara p {
+  margin-block: 3rem;
+}
+.eliPara ul li {
+  list-style-type: circle;
+}
+/***** End Eligibility Section *****/
+
+/***** Recovery Section *****/
+.formBox {
+  border: 1px solid gray;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-shadow: 1px 1px 0.85rem black;
+}
+
+.formBox p {
+  text-align: center;
+  color: var(--dark-primary-color);
+  font-size: 1.5rem;
+  font-family: formFont, sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.formBox form {
+  margin-top: 10px;
+}
+.formBox form,
+input {
+  text-align: center;
+  width: 100%;
+}
+.formBox form input {
+  padding: 0.5rem;
+}
+.formBox form input:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.formBox form button {
+  border: none;
+  outline: none;
+  background-color: var(--light-primary-color);
+  width: 100%;
+  padding: 0.9rem;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.formBox form button:hover {
+  box-shadow: 1px 1px 0.85rem black;
+}
+
+/***** End Recovery Section *****/
+
+/***** FAQ Section *****/
+.faqSection .sectionContainer2 {
+  border-bottom: none;
+}
+.accordion_container {
+  width: 100%;
+  margin-top: 1rem;
+}
+.accordion_head {
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  font-family: arial;
+  font-size: 1.3rem;
+  margin: 0 0 20px 0;
+  padding: 7px 11px;
+  font-weight: 500;
+}
+.accordion_body {
+  background: transparent;
+  border-top: 1px solid var(--light-primary-color);
+  border-bottom: 1px solid var(--light-primary-color);
+  margin: 1rem 0;
+}
+
+.accordion_body p {
+  padding: 18px 5px;
+  border-left: 1px solid var(--light-primary-color);
+  margin: 0px;
+  margin-block: 1rem;
+  margin-inline-start: 2rem;
+}
+.plusminus {
+  float: left;
+  margin-right: 2rem;
+}
+/***** End FAQ Section *****/
+
+.touchSection {
+  background-color: var(--dark-primary-color);
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 2rem;
+}
+.touchSection h2 {
+  margin: 1rem 0;
+}
+.touchbtn {
+  background-color: var(--light-primary-color);
+  padding: 1rem;
+  position: relative;
+}
+.touchbtn a {
+  font-size: 1.2rem;
+}
+.touchbtn a::after {
+  content: "";
+  background-color: white;
+  width: 1%;
+  height: 40px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -30px;
+  transform: translate(-50%, 20%);
+  -webkit-transform: translate(-50%, 20%);
+  -moz-transform: translate(-50%, 20%);
+  -ms-transform: translate(-50%, 20%);
+  -o-transform: translate(-50%, 20%);
+}
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.btnContainer p {
+  font-size: 1.5rem;
+}
+/* ******************************************************************************************************** */
+/***** Media Query Section *****/
+@media (max-width: 977px) {
+  html {
+    font-size: 10px;
+  }
+  .grid-two--cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .formBox {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .header2 {
+    background-color: transparent;
+  }
+  .header2__links {
+    display: none;
+  }
+  /* responsive Navbar */
+  .medCircle {
+    display: none;
+  }
+  .navContact {
+    display: none;
+  }
+  .responsive {
+    display: inline-block;
+  }
+  .bars {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 3rem;
+  }
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/***** End Media Query Section *****/
